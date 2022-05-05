@@ -1,0 +1,18 @@
+{
+    "sourceFile": "manifest.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1651721534542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1651721534542,
+            "name": "Commit-0",
+            "content": "{\r\n   \"manifest_version\": 3,\r\n   \"name\": \"NEW-TAB\",\r\n   \"version\": \"1.0.0\",\r\n   \"action\": {\r\n      \"default_title\": \"NEW-TAB\",\r\n      \"default_icon\": {\r\n         \"32\": \"icons/logo32.png\",\r\n         \"72\": \"icons/logo.png\",\r\n         \"128\": \"icons/logo128.png\",\r\n         \"512\": \"icons/logo512.png\"\r\n      }\r\n   },\r\n   \"default_locale\": \"en\",\r\n   \"description\": \"NEW-TAB\",\r\n   \"icons\": {\r\n      \"32\": \"icons/logo32.png\",\r\n      \"72\": \"icons/logo.png\",\r\n      \"128\": \"icons/logo128.png\",\r\n      \"512\": \"icons/logo512.png\"\r\n   },\r\n   \"author\": \"shuang\",\r\n   \"background\": {\r\n      \"service_worker\": \"service-worker.js\"\r\n   },\r\n   \"content_scripts\": [\r\n      {\r\n         \"matches\": [\r\n            \"https://*.nytimes.com/*\"\r\n         ],\r\n         \"css\": [\r\n            \"./dist/assets/index.70fbcd51.css\"\r\n         ],\r\n         \"js\": [\r\n            \"./dist/assets/index.f9a9f117.js\"\r\n         ]\r\n      }\r\n   ],\r\n   \"chrome_url_overrides\": {\r\n      \"newtab\": \"./dist/index.html\"\r\n   },\r\n   \"devtools_page\": \"./dist/index.html\",\r\n   \"host_permissions\": [\r\n      \"http://*/*\",\r\n      \"https://*/*\"\r\n   ],\r\n   \"permissions\": [\r\n      \"tabs\",\r\n      \"storage\",\r\n      \"contextMenus\",\r\n      \"webRequest\",\r\n      \"declarativeContent\"\r\n   ],\r\n   \"optional_permissions\": [\r\n      \"downloads\"\r\n   ],\r\n   \"options_page\": \"options.html\",\r\n   \"options_ui\": {\r\n      \"page\": \"options.html\"\r\n   }\r\n}"
+        }
+    ]
+}

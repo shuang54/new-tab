@@ -1,0 +1,61 @@
+{
+   "manifest_version": 3,
+   "name": "NEW-TAB",
+   "version": "1.0.0",
+   "action": {
+      "default_title": "NEW-TAB",
+      "default_icon": {
+         "32": "icons/logo32.png",
+         "72": "icons/logo.png",
+         "128": "icons/logo128.png",
+         "512": "icons/logo512.png"
+      }
+   },
+   "default_locale": "en",
+   "description": "NEW-TAB",
+   "icons": {
+      "32": "icons/logo32.png",
+      "72": "icons/logo.png",
+      "128": "icons/logo128.png",
+      "512": "icons/logo512.png"
+   },
+   "author": "shuang",
+   "background": {
+      "service_worker": "service-worker.js"
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "https://*.nytimes.com/*"
+         ],
+         "css": [
+            "./dist/assets/index.70fbcd51.css"
+         ],
+         "js": [
+            "./dist/assets/index.f9a9f117.js"
+         ]
+      }
+   ],
+   "chrome_url_overrides": {
+      "newtab": "./dist/index.html"
+   },
+   "devtools_page": "./dist/index.html",
+   "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+   ],
+   "permissions": [
+      "tabs",
+      "storage",
+      "contextMenus",
+      "webRequest",
+      "declarativeContent"
+   ],
+   "optional_permissions": [
+      "downloads"
+   ],
+   "options_page": "options.html",
+   "options_ui": {
+      "page": "options.html"
+   }
+}
